@@ -1,5 +1,5 @@
 <nav aria-label="Navigation">
-  <a href="{{ with .Site.Params.repo_url }}{{ . }}{{ else }}{{ .Site.BaseURL }}{{ end }}" class="project">
+  <span class="project">
     <div class="banner">
       {{ with .Site.Params.logo }}
         <div class="logo">
@@ -8,13 +8,15 @@
       {{ end }}
       <div class="name">
         <strong>{{ .Site.Title }} {{ with .Site.Params.version }}<span class="version">{{ . }}</span>{{ end }}</strong>
+        <br>
+        by <a href="https://github.com/dsumer">Dominik Sumer</a>
         {{ with .Scratch.Get "repo_id" }}
           <br>
           {{ . }}
         {{ end }}
       </div>
     </div>
-  </a>
+  </span>
 
   <div class="scrollable">
     <div class="wrapper">

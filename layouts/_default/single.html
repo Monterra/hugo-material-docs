@@ -27,21 +27,17 @@
 			<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
 
 			{{ .Content }}
-
-			<aside class="copyright" role="note">
-				{{ with .Site.Params.copyright }}
-				&copy; {{ $.Now.Format "2006" }} {{ . }} &ndash;
-				{{ end }}
-				Documentation built with
-				<a href="https://www.gohugo.io" target="_blank">Hugo</a>
-				using the
-				<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
-			</aside>
-
-			<footer class="footer">
-				{{ partial "footer" . }}
-			</footer>
 		</div>
+
+		<aside class="copyright" role="note">
+			{{ with .Site.Params.copyright }}
+			&copy; {{ $.Now.Format "2006" }} {{ . }} &ndash;
+			{{ end }}
+			Website built with <a href="https://github.com/Monterra/seriousco.de" class="fa fa-heart"></a>️ and
+			<a href="https://www.gohugo.io" target="_blank">Hugo</a>
+			using the
+			<a href="http://github.com/digitalcraftsman/hugo-material-docs" target="_blank">Material</a> theme.
+		</aside>
 	</article>
 
 	<div class="results" role="status" aria-live="polite">

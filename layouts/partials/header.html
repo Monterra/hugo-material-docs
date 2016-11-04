@@ -7,7 +7,8 @@
     </div>
     <div class="stretch">
       <div class="title">
-        {{ .Title }}
+        <!--{{ .Title }}-->
+        <a href="/">seriousco.de</a>
       </div>
     </div>
 
@@ -22,12 +23,16 @@
       <a href="https://github.com/{{ . }}" title="@{{ . }} on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
     </div>
     {{ end }}
-    
-    <!-- TODO: disabled until Hugo supports the generation of a content index natively 
+
+    <div class="button" role="button" aria-label="Facebook">
+      <a href="https://www.facebook.com/dominik.sumer" title="dominik.sumer on Facebook" target="_blank" class="toggle-button icon fa fa-facebook"></a>
+    </div>
+
+    <!-- TODO: disabled until Hugo supports the generation of a content index natively
     <div class="button button-search" role="button" aria-label="Search">
       <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
     </div>
-    -->    
+    -->
   </div>
   <div class="bar search">
     <div class="button button-close" role="button" aria-label="Close">
