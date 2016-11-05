@@ -1,11 +1,9 @@
 <nav aria-label="Navigation">
   <span class="project">
     <div class="banner">
-      {{ with .Site.Params.logo }}
-        <div class="logo">
-          <img src="{{ $.Site.BaseURL }}{{ . }}">
-        </div>
-      {{ end }}
+    <div class="logo">
+        <i class="fa fa-code fa-lg"></i>
+    </div>
       <div class="name">
         <a href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }} {{ with .Site.Params.version }}<span class="version">{{ . }}</span>{{ end }}</strong></a>
         <br>
