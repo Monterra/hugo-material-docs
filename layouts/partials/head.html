@@ -58,9 +58,11 @@
     {{ $text := or .Site.Params.font.text "Roboto" }}
     {{ $code := or .Site.Params.font.code "Roboto Mono" }}
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family={{ $text }}:400,700|{{ replace  $code " " "+" | safeURL }}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
     <style>
       body, input {
         font-family: '{{ $text }}', Helvetica, Arial, sans-serif;
+        letter-spacing: .8px;
       }
       pre, code {
         font-family: '{{ $code }}', 'Courier New', 'Courier', monospace;
