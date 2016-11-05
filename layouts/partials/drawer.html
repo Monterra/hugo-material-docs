@@ -7,9 +7,9 @@
         </div>
       {{ end }}
       <div class="name">
-        <strong>{{ .Site.Title }} {{ with .Site.Params.version }}<span class="version">{{ . }}</span>{{ end }}</strong>
+        <a href="{{ .Site.BaseURL }}"><strong>{{ .Site.Title }} {{ with .Site.Params.version }}<span class="version">{{ . }}</span>{{ end }}</strong></a>
         <br>
-        by <a href="https://github.com/dsumer">Dominik Sumer</a>
+        by <a href="https://github.com/dsumer" target="_blank" class="username">Dominik Sumer</a>
         {{ with .Scratch.Get "repo_id" }}
           <br>
           {{ . }}
@@ -35,8 +35,6 @@
           </li>
         </ul>
       {{ end }}
-
-      <hr>
 
       <div class="toc">
         {{ if gt (len .Site.Menus.main) 0 }}
