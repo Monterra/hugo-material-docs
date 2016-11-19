@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="{{ .Site.BaseURL }}stylesheets/palettes.css">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}{{ with .Site.Params.highlight_css }}{{ . }}{{ else }}stylesheets/highlight/highlight.css{{ end }}">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}stylesheets/magnific-popup.css">
 
     {{/* set default values if no custom ones are defined */}}
     {{ $text := or .Site.Params.font.text "Roboto" }}
@@ -74,6 +75,28 @@
     {{ end }}
     <script src="{{ .Site.BaseURL }}javascripts/modernizr.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="{{ .Site.BaseURL }}javascripts/magnific-popup.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('.image-link').click(function () {
+          return false;
+        });
+        $('.image-link').magnificPopup({
+          type:'image',
+          disableOn: 650,
+          mainClass: 'mfp-with-zoom', // this class is for CSS animation below
+
+          zoom: {
+            enabled: true,
+            duration: 300,
+            easing: 'ease-in-out',
+            opener: function(openerElement) {
+              return openerElement.is('img') ? openerElement : openerElement.find('img');
+            }
+          }
+        });
+      });
+    </script>
 
     {{ with .RSSlink }}
     <link href="{{ . }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
