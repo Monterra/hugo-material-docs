@@ -147,6 +147,7 @@
 }
 .article a.image-link {
     cursor: zoom-in;
+    border: none;
 }
 
 .article h2 {
