@@ -12,7 +12,7 @@
     <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Site.Title }} - {{ .Title }}{{ end }}</title>
     {{ .Hugo.Generator }}
 
-    {{ with .Site.Params.description }}
+    {{ with .Description }}
     <meta name="description" content="{{ . }}">
     {{ end }}
     <link rel="canonical" href="{{ .Permalink }}">
@@ -27,7 +27,7 @@
     {{ with .Scratch.Get "shareimage" }}
     <meta property="og:image" content="{{ $.Site.BaseURL }}images/{{ . }}">
     {{ end }}
-    {{ with .Site.Params.description }}
+    {{ with .Description }}
     <meta property="og:description" content="{{ . }}">
     {{ end }}
     {{ with .Title }}<meta name="apple-mobile-web-app-title" content="{{ . }}">{{ end }}
