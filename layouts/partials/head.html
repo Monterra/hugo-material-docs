@@ -21,8 +21,15 @@
     {{ end }}
 
     <meta property="og:url" content="{{ .Permalink }}">
-    {{ with .Title }}<meta property="og:title" content="{{ . }}">{{ end }}
-    {{ with .Scratch.Get "shareimage" }}<meta property="og:image" content="{{ $.Site.BaseURL }}images/{{ . }}">{{ end }}
+    {{ with .Title }}
+    <meta property="og:title" content="{{ . }}">
+    {{ end }}
+    {{ with .Scratch.Get "shareimage" }}
+    <meta property="og:image" content="{{ $.Site.BaseURL }}images/{{ . }}">
+    {{ end }}
+    {{ with .Site.Params.description }}
+    <meta property="og:description" content="{{ . }}">
+    {{ end }}
     {{ with .Title }}<meta name="apple-mobile-web-app-title" content="{{ . }}">{{ end }}
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
